@@ -1,7 +1,7 @@
 @if(!$products->isEmpty())
     <table class="table table-striped">
         <thead>
-        <th class="col-md-2 col-lg-2">Cover</th>
+        <th class="col-md-2  col-lg-2">Cover</th>
         <th class="col-md-2 col-lg-5">Name</th>
         <th class="col-md-2 col-lg-2">Quantity</th>
         <th class="col-md-2 col-lg-1"></th>
@@ -68,8 +68,9 @@
                         {{ csrf_field() }}
                         <input type="hidden" name="_method" value="put">
                         <div class="input-group">
-                            <input type="text" name="quantity" value="{{ $cartItem->qty }}" class="form-control" />
-                            <span class="input-group-btn"><button class="btn btn-default">Update</button></span>
+                            <!-- <input type="text" name="quantity" value="{{ $cartItem->qty }}" class="form-control" /> -->
+                            <p>{{ $cartItem->qty }}</p>
+                            <!-- <span class="input-group-btn"><button class="btn btn-default">Update</button></span> -->
                         </div>
                     </form>
                 </td>

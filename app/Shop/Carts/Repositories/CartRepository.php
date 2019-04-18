@@ -99,7 +99,12 @@ class CartRepository extends BaseRepository implements CartRepositoryInterface
      */
     public function updateQuantityInCart(string $rowId, int $quantity) : CartItem
     {
+        // $productRepo = new ProductRepository(new Product());
+     
+        // $product = $productRepo->findProductById($rowId);
+
         return $this->model->update($rowId, $quantity);
+        // return int($product->quantity);
     }
 
     /**

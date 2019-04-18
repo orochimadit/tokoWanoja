@@ -84,8 +84,9 @@
                                             {{ csrf_field() }}
                                             <input type="hidden" name="_method" value="put">
                                             <div class="input-group">
-                                                <input type="text" name="quantity" value="{{ $cartItem->qty }}" class="form-control" />
-                                                <span class="input-group-btn"><button class="btn btn-default">Update</button></span>
+                                                <!-- <input type="text" name="quantity" value="{{ $cartItem->qty }}" class="form-control" /> -->
+                                                <!-- <span class="input-group-btn"><button class="btn btn-default">Update</button></span> -->
+                                                <p>{{ $cartItem->qty }}</p>
                                             </div>
                                         </form>
                                     </td>

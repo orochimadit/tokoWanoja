@@ -1,4 +1,4 @@
-<tr>
+<!-- <tr>
     <td>
         @if(isset($payment['name']))
             {{ ucwords($payment['name']) }}
@@ -32,4 +32,4 @@
             $('.rate').val($(this).val())
         });
     });
-</script>
+</script> -->

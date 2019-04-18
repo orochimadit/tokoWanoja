@@ -26,10 +26,10 @@
                                     <legend><i class="fa fa-home"></i> Addresses</legend>
                                     <table class="table table-striped">
                                         <thead>
-                                            <th>Alias</th>
-                                            <th>Address</th>
-                                            <th>Billing Address</th>
-                                            <th>Delivery Address</th>
+                                            <th>Penerima</th>
+                                            <th>Alamat</th>
+                                            <th>Alamat Penagihan</th>
+                                            <th>Alamat penerima</th>
                                         </thead>
                                         <tbody>
                                             @foreach($addresses as $key => $address)
@@ -55,7 +55,7 @@
                                                     <td>
                                                         @if($billingAddress->id == $address->id)
                                                             <label for="sameDeliveryAddress">
-                                                                <input type="checkbox" id="sameDeliveryAddress" checked="checked"> Same as billing
+                                                                <input type="checkbox" id="sameDeliveryAddress" checked="checked"> Sama dengan alamat penagihan
                                                             </label>
                                                         @endif
                                                     </td>

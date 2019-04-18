@@ -19,7 +19,7 @@
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" @if(request()->input('tab') == 'profile') class="active" @endif><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
                         <li role="presentation" @if(request()->input('tab') == 'orders') class="active" @endif><a href="#orders" aria-controls="orders" role="tab" data-toggle="tab">Orders</a></li>
-                        <li role="presentation" @if(request()->input('tab') == 'address') class="active" @endif><a href="#address" aria-controls="address" role="tab" data-toggle="tab">Addresses</a></li>
+                        <li role="presentation" @if(request()->input('tab') == 'address') class="active" @endif><a href="#address" aria-controls="address" role="tab" data-toggle="tab">Alamat</a></li>
                     </ul>
 
                     <!-- Tab panes -->
@@ -95,21 +95,21 @@
                         <div role="tabpanel" class="tab-pane @if(request()->input('tab') == 'address')active @endif" id="address">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <a href="{{ route('customer.address.create', auth()->user()->id) }}" class="btn btn-primary">Create your address</a>
+                                    <a href="{{ route('customer.address.create', auth()->user()->id) }}" class="btn btn-primary">Input Alamat</a>
                                 </div>
                             </div>
                             @if(!$addresses->isEmpty())
                                 <table class="table">
                                 <thead>
-                                    <th>Alias</th>
-                                    <th>Address 1</th>
-                                    <th>Address 2</th>
-                                    <th>City</th>
+                                    <th>Penerima</th>
+                                    <th>Alamat 1</th>
+                                    <th>Alamat 2</th>
+                                    <th>Kota</th>
                                     @if(isset($address->province))
                                     <th>Province</th>
                                     @endif
-                                    <th>State</th>
-                                    <th>Country</th>
+                                    <th>Provinsi</th>
+                                    <th>Negara</th>
                                     <th>Zip</th>
                                     <th>Phone</th>
                                     <th>Actions</th>
